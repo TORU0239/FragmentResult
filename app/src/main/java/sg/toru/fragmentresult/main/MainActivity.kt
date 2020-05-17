@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import sg.toru.fragmentresult.R
+import sg.toru.fragmentresult.nested.NestedActivity
 import sg.toru.fragmentresult.send.SendActivity
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         }
 
         btnParentChild.setOnClickListener {
-
+            startActivity(Intent(this@MainActivity, NestedActivity::class.java))
         }
     }
 }

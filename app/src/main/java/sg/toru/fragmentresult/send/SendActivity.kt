@@ -15,7 +15,7 @@ class SendActivity : AppCompatActivity(R.layout.activity_send) {
 
     private fun initSendFragment() {
         supportFragmentManager.beginTransaction()
-            .add(R.id.container, SendMainFragment::class.java, null)
+            .add(R.id.container_send, SendMainFragment::class.java, null)
             .commit()
     }
 }

@@ -24,7 +24,7 @@ class SendMainFragment : Fragment(R.layout.fragment_main) {
 
             setFragmentResult("requestKey", bundleOf("name" to edNameField.editableText.toString()))
             parentFragmentManager.commit {
-                replace(R.id.container, SendResultFragment::class.java, null)
+                replace(R.id.container_send, SendResultFragment::class.java, null)
                 addToBackStack(null)
             }
         }
