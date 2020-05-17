@@ -12,10 +12,6 @@ import sg.toru.fragmentresult.R
 
 class SendMainFragment : Fragment(R.layout.fragment_main) {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     private lateinit var edNameField:EditText
     private lateinit var btnSendData:Button
 
