@@ -6,9 +6,12 @@
     android:orientation="vertical"
     tools:context=".nested.NestedParentFragment">
 
-    <ImageView
+    <TextView
+        android:id="@+id/txt_from_child"
         android:layout_width="match_parent"
         android:layout_height="250dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
         android:background="@color/colorAccent"/>
 
     <androidx.fragment.app.FragmentContainerView
