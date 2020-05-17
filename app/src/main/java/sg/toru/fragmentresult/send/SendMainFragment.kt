@@ -1,17 +1,16 @@
-package sg.toru.fragmentresult
+package sg.toru.fragmentresult.send
 
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.fragment.app.setFragmentResult
-import androidx.fragment.app.setFragmentResultListener
+import sg.toru.fragmentresult.R
 
-class MainFragment : Fragment(R.layout.fragment_main) {
+class SendMainFragment : Fragment(R.layout.fragment_main) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +28,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
             setFragmentResult("requestKey", bundleOf("name" to edNameField.editableText.toString()))
             parentFragmentManager.commit {
-                replace(R.id.container, SecondFragment::class.java, null)
+                replace(R.id.container, SendResultFragment::class.java, null)
                 addToBackStack(null)
             }
         }
@@ -37,6 +36,6 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
     companion object {
         @JvmStatic
-        fun newInstance() = MainFragment()
+        fun newInstance() = SendMainFragment()
     }
 }

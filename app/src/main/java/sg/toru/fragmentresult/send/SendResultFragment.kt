@@ -1,14 +1,12 @@
-package sg.toru.fragmentresult
+package sg.toru.fragmentresult.send
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.setFragmentResultListener
+import sg.toru.fragmentresult.R
 
-class SecondFragment : Fragment(R.layout.fragment_second) {
+class SendResultFragment : Fragment(R.layout.fragment_second) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +17,6 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
 
     companion object {
         @JvmStatic
-        fun newInstance() = SecondFragment()
+        fun newInstance() = SendResultFragment()
     }
 }
